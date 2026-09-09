@@ -563,6 +563,51 @@ input:focus, select:focus, textarea:focus {
     }
 }
 
+.qr-float-card {
+    position: fixed;
+    right: 0.35rem;
+    top: 0.75rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.55rem 0.45rem;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(223, 213, 195, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(46, 42, 39, 0.08);
+    backdrop-filter: blur(2px);
+}
+
+.qr-float-card img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: #FFF;
+    border-radius: 6px;
+}
+
+.qr-float-card p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 900px) {
+    .qr-float-card {
+        right: 0.35rem;
+        top: auto;
+        bottom: 0.75rem;
+    }
+
+    .qr-float-card img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 footer {
     text-align: center;
     padding: 2.5rem 1rem;

@@ -565,46 +565,46 @@ input:focus, select:focus, textarea:focus {
 
 .qr-float-card {
     position: fixed;
-    right: 0.35rem;
-    top: 0.75rem;
+    right: 0.2rem;
+    top: 1rem;
     z-index: 1000;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.45rem;
-    padding: 0.55rem 0.55rem 0.45rem;
-    background: rgba(255, 255, 255, 0.82);
-    border: 1px solid rgba(223, 213, 195, 0.95);
-    border-radius: 10px;
-    box-shadow: 0 5px 12px rgba(46, 42, 39, 0.08);
-    backdrop-filter: blur(2px);
+    gap: 0.25rem;
+    padding: 0.35rem;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(223, 213, 195, 0.85);
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(46, 42, 39, 0.06);
+    backdrop-filter: blur(1px);
 }
 
 .qr-float-card img {
     display: block;
-    width: 120px;
-    height: 120px;
+    width: 88px;
+    height: 88px;
     background-color: #FFF;
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
 .qr-float-card p {
     margin: 0;
-    font-size: 0.75rem;
+    font-size: 0.62rem;
     color: var(--text-color);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
 }
 
 @media (max-width: 900px) {
     .qr-float-card {
-        right: 0.35rem;
+        right: 0.2rem;
         top: auto;
-        bottom: 0.75rem;
+        bottom: 0.5rem;
     }
 
     .qr-float-card img {
-        width: 100px;
-        height: 100px;
+        width: 72px;
+        height: 72px;
     }
 }
 

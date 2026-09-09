@@ -5,389 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Championships & Star Players - Hobby Horsing Club</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* 兜底及页面专属样式（与全局 style.css 大地纸张质感保持一致） */
-        :root {
-            --bg-paper: #F5F0E6;
-            --card-paper: #EFE8D8;
-            --border-earth: #DFD5C3;
-            --text-charcoal: #2E2A27;
-            --terracotta: #C26D51;
-            --moss-green: #5E6C53;
-            --ochre: #D9A05B;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: var(--bg-paper);
-            color: var(--text-charcoal);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-            position: relative;
-            min-height: 100vh;
-        }
-
-        /* 模拟粗糙纸张微噪点覆盖层 */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 999;
-        }
-
-        /* 纸张瀑布下落载入动画 */
-        @keyframes paperDrop {
-            0% {
-                opacity: 0;
-                transform: translateY(-50px) rotate(-1.5deg);
-            }
-            70% {
-                transform: translateY(6px) rotate(0.5deg);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) rotate(0deg);
-            }
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            animation: paperDrop 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        }
-
-        /* 顶部导航 */
-        header {
-            background: var(--card-paper);
-            border: 1px solid var(--border-earth);
-            border-radius: 8px;
-            padding: 15px 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 12px rgba(46, 42, 39, 0.03);
-        }
-
-        .logo {
-            font-family: 'Georgia', serif;
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: var(--terracotta);
-            text-decoration: none;
-            letter-spacing: 0.5px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-charcoal);
-            font-size: 0.95rem;
-            font-weight: 500;
-            padding: 6px 12px;
-            border-radius: 4px;
-            transition: all 0.2s ease;
-        }
-
-        nav a:hover, nav a.active {
-            background-color: var(--terracotta);
-            color: #FAF6EE;
-        }
-
-        /* 页面标题区 */
-        .hero-banner {
-            text-align: center;
-            padding: 40px 20px;
-            background: var(--card-paper);
-            border: 1px solid var(--border-earth);
-            border-radius: 8px;
-            margin-bottom: 35px;
-            position: relative;
-        }
-
-        .hero-banner h1 {
-            font-family: 'Georgia', serif;
-            font-size: 2.2rem;
-            color: var(--text-charcoal);
-            margin-bottom: 12px;
-        }
-
-        .hero-banner p {
-            color: #665F58;
-            font-size: 1.05rem;
-            max-width: 650px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-family: 'Georgia', serif;
-            font-size: 1.6rem;
-            color: var(--terracotta);
-            margin-bottom: 20px;
-            padding-bottom: 8px;
-            border-bottom: 2px dashed var(--border-earth);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* 赛事日程表格区 */
-        .tournament-section {
-            margin-bottom: 50px;
-        }
-
-        .schedule-table-wrapper {
-            background: var(--card-paper);
-            border: 1px solid var(--border-earth);
-            border-radius: 8px;
-            overflow-x: auto;
-            padding: 10px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-        }
-
-        th, td {
-            padding: 14px 18px;
-            border-bottom: 1px solid var(--border-earth);
-        }
-
-        th {
-            font-family: 'Georgia', serif;
-            background-color: rgba(223, 213, 195, 0.4);
-            color: var(--text-charcoal);
-            font-weight: 600;
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        .status-tag {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .status-upcoming {
-            background-color: #E8F0E3;
-            color: var(--moss-green);
-            border: 1px solid var(--moss-green);
-        }
-
-        .status-open {
-            background-color: #FDF0E6;
-            color: var(--terracotta);
-            border: 1px solid var(--terracotta);
-        }
-
-        .status-ended {
-            background-color: #EFEBE4;
-            color: #8C827A;
-            border: 1px solid #C5BCB3;
-        }
-
-        /* 明星选手与爱马网格 */
-        .stars-section {
-            margin-bottom: 50px;
-        }
-
-        .stars-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-            gap: 25px;
-        }
-
-        .star-card {
-            background: var(--card-paper);
-            border: 1px solid var(--border-earth);
-            border-radius: 8px;
-            padding: 20px;
-            position: relative;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .star-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(46, 42, 39, 0.06);
-        }
-
-        .star-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--ochre);
-            color: #FFF;
-            font-size: 0.75rem;
-            font-weight: bold;
-            padding: 4px 10px;
-            border-radius: 4px;
-            letter-spacing: 0.5px;
-        }
-
-        .avatar-placeholder {
-            width: 100%;
-            height: 180px;
-            background-color: var(--bg-paper);
-            border: 1px dashed var(--border-earth);
-            border-radius: 6px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #8C827A;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-        }
-
-        .star-name {
-            font-family: 'Georgia', serif;
-            font-size: 1.3rem;
-            color: var(--text-charcoal);
-            margin-bottom: 4px;
-        }
-
-        .horse-name {
-            font-size: 1rem;
-            color: var(--moss-green);
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .specs-list {
-            list-style: none;
-            font-size: 0.9rem;
-            color: #524B45;
-            margin-bottom: 15px;
-        }
-
-        .specs-list li {
-            margin-bottom: 5px;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px dotted var(--border-earth);
-            padding-bottom: 3px;
-        }
-
-        .quote-box {
-            font-style: italic;
-            font-size: 0.88rem;
-            color: #6A625A;
-            background: rgba(245, 240, 230, 0.7);
-            padding: 10px;
-            border-left: 3px solid var(--terracotta);
-            border-radius: 2px;
-        }
-
-        /* 荣誉墙区 */
-        .trophy-section {
-            background: var(--card-paper);
-            border: 1px solid var(--border-earth);
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 40px;
-        }
-
-        .trophy-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            text-align: center;
-        }
-
-        .trophy-item {
-            border: 1px solid var(--border-earth);
-            padding: 20px 15px;
-            border-radius: 6px;
-            background: var(--bg-paper);
-        }
-
-        .trophy-icon {
-            font-size: 2rem;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        .trophy-title {
-            font-family: 'Georgia', serif;
-            font-weight: bold;
-            color: var(--text-charcoal);
-            margin-bottom: 5px;
-        }
-
-        .trophy-desc {
-            font-size: 0.85rem;
-            color: #736B63;
-        }
-
-        /* 页脚 */
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #7A726A;
-            font-size: 0.88rem;
-            border-top: 1px solid var(--border-earth);
-            margin-top: 40px;
-        }
-
-        /* 响应式适配 */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-    </style>
 </head>
 <body>
-
-    <div class="container">
-        <!-- 顶部导航栏 -->
-        <header>
-            <a href="index.html" class="logo">🐴 Hobby Horsing Club</a>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🐎 Hobby Horsing Club</a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="forum.html">Forum</a></li>
                     <li><a href="history.html">History</a></li>
-                    <li><a href="news.html">News</a></li>
+                    <li><a href="news.html">Latest News</a></li>
                     <li><a href="membership.html">Membership</a></li>
-                    <li><a href="tournaments.html" class="active">Tournaments & Stars</a></li>
+                    <li><a href="tournament.html" class="active">Tournaments & Stars</a></li>
                 </ul>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <!-- 页面主 Hero 区 -->
-        <section class="hero-banner">
-            <h1>Championships & Star Players</h1>
-            <p>Welcome to our Hall of Fame and Competition Hub. Explore upcoming tournaments across Australia, meet our record-breaking riders, and learn about their iconic handcrafted wooden companions!</p>
-        </section>
+    <main class="paper-drop">
+        <h1 class="page-title">Championships & Star Players</h1>
+        <p class="page-subtitle">Welcome to our Hall of Fame and Competition Hub. Explore upcoming tournaments across Australia, meet our record-breaking riders, and learn about their iconic handcrafted wooden companions!</p>
 
-        <!-- 1. 赛事日程表板块 -->
-        <section class="tournament-section">
-            <h2 class="section-title">🏆 Upcoming Tournaments & Events</h2>
+        <section class="card">
+            <h2>Upcoming Tournaments & Events</h2>
             <div class="schedule-table-wrapper">
                 <table>
                     <thead>
@@ -400,7 +41,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- 赛事 1 -->
                         <tr>
                             <td><strong>Oct 15, 2026</strong></td>
                             <td>Autumn Grand Showjumping Gala</td>
@@ -408,15 +48,13 @@
                             <td>Sydney Olympic Park Arena, Australia</td>
                             <td><span class="status-tag status-open">Registration Open</span></td>
                         </tr>
-                        <!-- 赛事 2 -->
                         <tr>
                             <td><strong>Nov 02, 2026</strong></td>
                             <td>National Freestyle Dressage Cup</td>
-                            <td>Musical Freestyle & Kur</td>
+                            <td>Musical Freestyle &amp; Kur</td>
                             <td>Melbourne Arts Centre Hall, Australia</td>
                             <td><span class="status-tag status-upcoming">Upcoming</span></td>
                         </tr>
-                        <!-- 赛事 3 -->
                         <tr>
                             <td><strong>Dec 18, 2026</strong></td>
                             <td>Winter Obstacle Sprint Challenge</td>
@@ -424,7 +62,6 @@
                             <td>Brisbane Forest Trails Park, Australia</td>
                             <td><span class="status-tag status-upcoming">Upcoming</span></td>
                         </tr>
-                        <!-- 赛事 4 (已结束示例) -->
                         <tr>
                             <td><strong>Aug 20, 2026</strong></td>
                             <td>Summer High Jump Championship</td>
@@ -437,18 +74,14 @@
             </div>
         </section>
 
-        <!-- 2. 明星骑手与爱马板块 -->
-        <section class="stars-section">
-            <h2 class="section-title">⭐ Star Riders & Companion Horses</h2>
-            <div class="stars-grid">
-
-                <!-- 明星 1 -->
-                <div class="star-card">
+        <section class="card">
+            <h2>Star Riders &amp; Companion Horses</h2>
+            <div class="grid-3 stars-grid">
+                <article class="star-card">
                     <span class="star-badge">HIGH JUMP RECORD</span>
                     <div class="avatar-placeholder">
-                        <!-- 占位提示：可替换为骑手与木马的图片 <img src="images/star1.jpg" alt="Rider"> -->
                         <span>📷 [Image Placeholder]</span>
-                        <small>Rider: Elena Moreau & Thunderbolt</small>
+                        <small>Rider: Elena Moreau &amp; Thunderbolt</small>
                     </div>
                     <h3 class="star-name">Elena "The Flying Hoof" Moreau</h3>
                     <div class="horse-name">🐴 Wooden Companion: Thunderbolt</div>
@@ -460,33 +93,31 @@
                     <div class="quote-box">
                         "Thunderbolt and I have practiced the rhythm of galloping for years. It's all about precision, bounce, and trust!"
                     </div>
-                </div>
+                </article>
 
-                <!-- 明星 2 -->
-                <div class="star-card">
+                <article class="star-card">
                     <span class="star-badge">DRESSAGE CHAMPION</span>
                     <div class="avatar-placeholder">
                         <span>📷 [Image Placeholder]</span>
-                        <small>Rider: Luca Rossi & Starlight Whisper</small>
+                        <small>Rider: Luca Rossi &amp; Starlight Whisper</small>
                     </div>
                     <h3 class="star-name">Luca "Mane Master" Rossi</h3>
                     <div class="horse-name">🐴 Wooden Companion: Starlight Whisper</div>
                     <ul class="specs-list">
-                        <li><span>Wood Type:</span> <strong>Polished Maple & Wool Mane</strong></li>
+                        <li><span>Wood Type:</span> <strong>Polished Maple &amp; Wool Mane</strong></li>
                         <li><span>Specialty:</span> <strong>Freestyle Dressage</strong></li>
                         <li><span>Joined Club:</span> <strong>2022</strong></li>
                     </ul>
                     <div class="quote-box">
                         "Elegance isn't just about movement—it's about expressing the soul of your stick horse through every step."
                     </div>
-                </div>
+                </article>
 
-                <!-- 明星 3 -->
-                <div class="star-card">
+                <article class="star-card">
                     <span class="star-badge">SPEED DEMON</span>
                     <div class="avatar-placeholder">
                         <span>📷 [Image Placeholder]</span>
-                        <small>Rider: Sofia Andersson & Rusty Breeze</small>
+                        <small>Rider: Sofia Andersson &amp; Rusty Breeze</small>
                     </div>
                     <h3 class="star-name">Sofia Andersson</h3>
                     <div class="horse-name">🐴 Wooden Companion: Rusty Breeze</div>
@@ -498,14 +129,12 @@
                     <div class="quote-box">
                         "Rusty Breeze is built for agile sharp turns and maximum sprint velocity. We love outdoor forest tracks!"
                     </div>
-                </div>
-
+                </article>
             </div>
         </section>
 
-        <!-- 3. 荣誉榜墙 -->
-        <section class="trophy-section">
-            <h2 class="section-title">🎖️ Club Trophy Wall & Records</h2>
+        <section class="card trophy-section">
+            <h2>Club Trophy Wall &amp; Records</h2>
             <div class="trophy-grid">
                 <div class="trophy-item">
                     <span class="trophy-icon">🥇</span>
@@ -515,12 +144,12 @@
                 <div class="trophy-item">
                     <span class="trophy-icon">🎨</span>
                     <div class="trophy-title">Best Craftsmanship</div>
-                    <div class="trophy-desc">Awarded for handmade bridle & detailed stitching</div>
+                    <div class="trophy-desc">Awarded for handmade bridle &amp; detailed stitching</div>
                 </div>
                 <div class="trophy-item">
                     <span class="trophy-icon">🌟</span>
                     <div class="trophy-title">Sportsmanship Award</div>
-                    <div class="trophy-desc">Recognizing camaraderie & encouraging beginner riders</div>
+                    <div class="trophy-desc">Recognizing camaraderie &amp; encouraging beginner riders</div>
                 </div>
                 <div class="trophy-item">
                     <span class="trophy-icon">🚩</span>
@@ -529,12 +158,10 @@
                 </div>
             </div>
         </section>
+    </main>
 
-        <!-- 页脚 -->
-        <footer>
-            <p>&copy; 2026 Hobby Horsing Club. All rights reserved. Crafted with passion & Earthy Paper Style.</p>
-        </footer>
-    </div>
-
+    <footer>
+        <p>&copy; 2026 Hobby Horsing Club. Earthy handmade paper style home page. All rights reserved.</p>
+    </footer>
 </body>
 </html>

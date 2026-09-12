@@ -26,8 +26,8 @@
 
     <!-- Page Body -->
     <main class="paper-drop">
-        <h1 class="page-title">Latest News</h1>
-        <p class="page-subtitle">Stay updated with official announcements, event reports, and training camp info.</p>
+        <h1 id="news-page-title" class="page-title">Latest News</h1>
+        <p id="news-page-subtitle" class="page-subtitle">Stay updated with official announcements, event reports, and training camp info.</p>
 
         <!-- News Grid -->
         <section class="grid-3">
@@ -35,34 +35,36 @@
                 <div style="background-color: #DFD5C3; height: 160px; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: #7A726B; font-weight: bold;">
                     [Image Placeholder]
                 </div>
-                <span style="font-size: 0.8rem; color: var(--accent-green); font-weight: bold;">Announcement &middot; 2026-09-01</span>
-                <h3 style="font-family: var(--font-serif); margin: 0.5rem 0;">Fall Obstacle Championship Prep Started</h3>
-                <p>The Fall Championship will feature professional and open categories. Join with your hobby horse and compete for the golden trophy!</p>
+                <span id="announcement-label" style="font-size: 0.8rem; color: var(--accent-green); font-weight: bold;">Announcement &middot; 2026-09-01</span>
+                <h3 id="announcement-title" style="font-family: var(--font-serif); margin: 0.5rem 0;">Fall Obstacle Championship Prep Started</h3>
+                <p id="announcement-copy">The Fall Championship will feature professional and open categories. Join with your hobby horse and compete for the golden trophy!</p>
             </article>
 
             <article class="card">
                 <div style="background-color: #DFD5C3; height: 160px; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: #7A726B; font-weight: bold;">
                     [Image Placeholder]
                 </div>
-                <span style="font-size: 0.8rem; color: var(--accent-green); font-weight: bold;">Training Camp &middot; 2026-08-25</span>
-                <h3 style="font-family: var(--font-serif); margin: 0.5rem 0;">Beginner Crafting & Riding Workshop Success</h3>
-                <p>Dozens of new students joined our workshop last weekend to sew their own horses and complete their first jump.</p>
+                <span id="camp-label" style="font-size: 0.8rem; color: var(--accent-green); font-weight: bold;">Training Camp &middot; 2026-08-25</span>
+                <h3 id="camp-title" style="font-family: var(--font-serif); margin: 0.5rem 0;">Beginner Crafting & Riding Workshop Success</h3>
+                <p id="camp-copy">Dozens of new students joined our workshop last weekend to sew their own horses and complete their first jump.</p>
             </article>
 
             <article class="card">
                 <div style="background-color: #DFD5C3; height: 160px; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: #7A726B; font-weight: bold;">
                     [Image Placeholder]
                 </div>
-                <span style="font-size: 0.8rem; color: var(--accent-green); font-weight: bold;">Media &middot; 2026-08-18</span>
-                <h3 style="font-family: var(--font-serif); margin: 0.5rem 0;">Club Invited to Green Sports Culture Week</h3>
-                <p>Our riders showcased freestyle dressage at the Culture Week, receiving an enthusiastic response from the audience.</p>
+                <span id="media-label" style="font-size: 0.8rem; color: var(--accent-green); font-weight: bold;">Media &middot; 2026-08-18</span>
+                <h3 id="media-title" style="font-family: var(--font-serif); margin: 0.5rem 0;">Club Invited to Green Sports Culture Week</h3>
+                <p id="media-copy">Our riders showcased freestyle dressage at the Culture Week, receiving an enthusiastic response from the audience.</p>
             </article>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Hobby Horsing Club. Earthy handmade paper style home page. All rights reserved.</p>
+        <p id="footer-copy">&copy; 2026 Hobby Horsing Club. Earthy handmade paper style home page. All rights reserved.</p>
     </footer>
+
+    <script src="language-switcher.js"></script>
 </body>
 </html>

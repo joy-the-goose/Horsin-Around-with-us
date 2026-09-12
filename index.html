@@ -28,44 +28,44 @@
     <main class="paper-drop">
         <!-- Hero Section -->
         <section class="card" style="text-align: center; padding: 4rem 2rem;">
-            <h1 class="page-title" style="border: none; padding: 0; display: inline-block;">Leap Your Dreams, Ride the Hobby Horse</h1>
-            <p class="page-subtitle">Welcome to our Hobby Horsing Club! Experience the perfect blend of elegance, speed, and nature.</p>
-            <a href="membership.html" class="btn">Join Us</a>
+            <h1 id="home-title" class="page-title" style="border: none; padding: 0; display: inline-block;">Leap Your Dreams, Ride the Hobby Horse</h1>
+            <p id="home-subtitle" class="page-subtitle">Welcome to our Hobby Horsing Club! Experience the perfect blend of elegance, speed, and nature.</p>
+            <a id="home-join" href="membership.html" class="btn">Join Us</a>
         </section>
 
         <!-- Club Introduction -->
         <section class="grid-2">
             <div class="card">
-                <h2>About the Club</h2>
-                <p>We are dedicated to promoting a healthy lifestyle and imaginative competitive art. Whether you are a beginner or a veteran rider, there is a stage for you here.</p>
+                <h2 id="about-title">About the Club</h2>
+                <p id="about-copy">We are dedicated to promoting a healthy lifestyle and imaginative competitive art. Whether you are a beginner or a veteran rider, there is a stage for you here.</p>
             </div>
             <div class="card">
-                <h2>Recent Focus</h2>
-                <p>The Spring National Hobby Horse Obstacle Championship is starting next month! Training camp registration is now open. Come pick your horse and join the competition!</p>
+                <h2 id="recent-title">Recent Focus</h2>
+                <p id="recent-copy">The Spring National Hobby Horse Obstacle Championship is starting next month! Training camp registration is now open. Come pick your horse and join the competition!</p>
             </div>
         </section>
 
         <!-- Quick Navigation -->
         <section class="grid-3">
             <div class="card">
-                <h3>History</h3>
-                <p>Explore the fascinating journey of this unique sport from Northern Europe to the rest of the world.</p>
+                <h3 id="history-card-title">History</h3>
+                <p id="history-card-copy">Explore the fascinating journey of this unique sport from Northern Europe to the rest of the world.</p>
                 <br>
-                <a href="history.html" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Learn More</a>
+                <a id="history-card-btn" href="history.html" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Learn More</a>
             </div>
 
             <div class="card">
-                <h3>Membership</h3>
-                <p>Learn about different membership levels, exclusive training courses, and custom equipment benefits.</p>
+                <h3 id="membership-card-title">Membership</h3>
+                <p id="membership-card-copy">Learn about different membership levels, exclusive training courses, and custom equipment benefits.</p>
                 <br>
-                <a href="membership.html" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Join Now</a>
+                <a id="membership-card-btn" href="membership.html" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Join Now</a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Hobby Horsing Club. Earthy handmade paper style home page. All rights reserved.</p>
+        <p id="footer-copy">&copy; 2026 Hobby Horsing Club. Earthy handmade paper style home page. All rights reserved.</p>
     </footer>
     
     <div class="qr-float-card">
@@ -73,7 +73,9 @@
             src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://joy-the-goose.github.io/Horsin-Around-with-us/" 
             alt="Hobby Horsing Club QR Code"
         />
-        <p>Scan&Join!</p>
+        <p id="qr-caption">Scan&Join!</p>
     </div>
+
+    <script src="language-switcher.js"></script>
 </body>
 </html>

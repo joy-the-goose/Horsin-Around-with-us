@@ -26,42 +26,42 @@
 
     <!-- Page Body -->
     <main class="paper-drop">
-        <h1 class="page-title">Membership & Benefits</h1>
-        <p class="page-subtitle">Join our family to enjoy professional training, gear customization, and priority registration.</p>
+        <h1 id="membership-page-title" class="page-title">Membership & Benefits</h1>
+        <p id="membership-page-subtitle" class="page-subtitle">Join our family to enjoy professional training, gear customization, and priority registration.</p>
 
         <!-- Benefits Comparison -->
         <section class="card">
-            <h2>Levels & Benefits</h2>
+            <h2 id="levels-title">Levels & Benefits</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Benefit</th>
-                        <th>Standard (Free)</th>
-                        <th>Pro Rider</th>
-                        <th>Grand Master</th>
+                        <th id="benefit-th">Benefit</th>
+                        <th id="standard-th">Standard (Free)</th>
+                        <th id="pro-rider-th">Pro Rider</th>
+                        <th id="grand-master-th">Grand Master</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Facility Access</strong></td>
+                        <td><strong id="facility-access-row">Facility Access</strong></td>
                         <td>Training Days</td>
                         <td>Priority Booking</td>
                         <td>Unlimited Access</td>
                     </tr>
                     <tr>
-                        <td><strong>Coaching</strong></td>
+                        <td><strong id="coaching-row">Coaching</strong></td>
                         <td>None</td>
                         <td>2 Workshops/Month</td>
                         <td>Weekly 1-on-1</td>
                     </tr>
                     <tr>
-                        <td><strong>Gear Discount</strong></td>
+                        <td><strong id="gear-discount-row">Gear Discount</strong></td>
                         <td>None</td>
                         <td>10% Off</td>
                         <td>25% Off + Custom</td>
                     </tr>
                     <tr>
-                        <td><strong>Tournament Entry</strong></td>
+                        <td><strong id="tournament-entry-row">Tournament Entry</strong></td>
                         <td>Regular</td>
                         <td>Priority Lane</td>
                         <td>Invitational Seat</td>
@@ -72,53 +72,55 @@
 
         <!-- Registration Form -->
         <section class="card">
-            <h2>New Member Registration</h2>
+            <h2 id="new-member-registration">New Member Registration</h2>
             <form>
                 <div class="grid-2" style="margin-bottom: 0;">
                     <div class="form-group">
-                        <label for="fullname">Full Name / Handle:</label>
+                        <label id="full-name-label" for="fullname">Full Name / Handle:</label>
                         <input type="text" id="fullname" placeholder="Enter your name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address:</label>
+                        <label id="email-label" for="email">Email Address:</label>
                         <input type="email" id="email" placeholder="name@example.com">
                     </div>
                 </div>
 
                 <div class="grid-2" style="margin-bottom: 0;">
                     <div class="form-group">
-                        <label for="membership-level">Membership Level:</label>
+                        <label id="membership-level-label" for="membership-level">Membership Level:</label>
                         <select id="membership-level">
-                            <option>Standard (Free - $0/yr)</option>
-                            <option>Pro Rider ($50/yr)</option>
-                            <option>Grand Master ($120/yr)</option>
+                            <option id="membership-option-1">Standard (Free - $0/yr)</option>
+                            <option id="membership-option-2">Pro Rider ($50/yr)</option>
+                            <option id="membership-option-3">Grand Master ($120/yr)</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="horse-type">Interested Horse Type:</label>
+                        <label id="horse-type-label" for="horse-type">Interested Horse Type:</label>
                         <select id="horse-type">
-                            <option>Classic Fabric</option>
-                            <option>Warmblood Sport</option>
-                            <option>Endurance Black</option>
-                            <option>Vintage Spotted</option>
-                            <option>Customized</option>
+                            <option id="horse-option-1">Classic Fabric</option>
+                            <option id="horse-option-2">Warmblood Sport</option>
+                            <option id="horse-option-3">Endurance Black</option>
+                            <option id="horse-option-4">Vintage Spotted</option>
+                            <option id="horse-option-5">Customized</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group" style="margin-top: 1.5rem;">
-                    <label for="bio">Rider Motto / Declaration:</label>
+                    <label id="rider-motto-label" for="bio">Rider Motto / Declaration:</label>
                     <textarea id="bio" rows="3" placeholder="Share your passion for Hobby Horsing..."></textarea>
                 </div>
 
-                <button type="submit" class="btn">Submit Application</button>
+                <button id="submit-application" type="submit" class="btn">Submit Application</button>
             </form>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Hobby Horsing Club. Earthy handmade paper style home page. All rights reserved.</p>
+        <p id="footer-copy">&copy; 2026 Hobby Horsing Club. Earthy handmade paper style home page. All rights reserved.</p>
     </footer>
+
+    <script src="language-switcher.js"></script>
 </body>
 </html>

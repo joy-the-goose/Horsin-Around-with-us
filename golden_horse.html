@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Unified Navigation Bar -->
     <header>
         <div class="nav-container">
             <a href="index.html" class="logo">🐎 Vote For Horses!</a>
@@ -18,107 +17,201 @@
                     <li><a href="history.html">History</a></li>
                     <li><a href="news.html">Latest News</a></li>
                     <li><a href="membership.html">Membership</a></li>
-                    <li><a href="golden_horse.html" class="active">Vote For Horses!</a></li>
+                    <li class="vote-nav-item"><a href="golden_horse.html" class="active">Vote For Horses!</a></li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
-    <!-- Page Body -->
-    <main class="paper-drop">
-        <h1 class="page-title">Membership & Benefits</h1>
-        <p class="page-subtitle">Join our family to enjoy professional training, gear customization, and priority registration.</p>
-
-        <!-- Benefits Comparison -->
-        <section class="card">
-            <h2>Levels & Benefits</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Benefit</th>
-                        <th>Standard (Free)</th>
-                        <th>Pro Rider</th>
-                        <th>Grand Master</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Facility Access</strong></td>
-                        <td>Training Days</td>
-                        <td>Priority Booking</td>
-                        <td>Unlimited Access</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Coaching</strong></td>
-                        <td>None</td>
-                        <td>2 Workshops/Month</td>
-                        <td>Weekly 1-on-1</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Gear Discount</strong></td>
-                        <td>None</td>
-                        <td>10% Off</td>
-                        <td>25% Off + Custom</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Tournament Entry</strong></td>
-                        <td>Regular</td>
-                        <td>Priority Lane</td>
-                        <td>Invitational Seat</td>
-                    </tr>
-                </tbody>
-            </table>
+    <main class="paper-drop vote-page">
+        <section class="card vote-header">
+            <h1 id="vote-title" class="page-title vote-title">🏆 Vote For Horses! | Who can claim The Golden Horse?</h1>
+            <p id="vote-subtitle" class="page-subtitle vote-subtitle">UQ is gearing up for the bamboo horse championship and the arena is buzzing. Every trot, every visual twist, and every dramatic whisper now sits in your hands. Which horse will rise above the noise and win your vote?</p>
+            <div class="votes-banner">
+                <span id="votes-label">All votes cast:</span>
+                <span id="total-votes">1,420</span>
+                <span id="votes-suffix">votes</span>
+            </div>
         </section>
 
-        <!-- Registration Form -->
-        <section class="card">
-            <h2>New Member Registration</h2>
-            <form>
-                <div class="grid-2" style="margin-bottom: 0;">
-                    <div class="form-group">
-                        <label for="fullname">Full Name / Handle:</label>
-                        <input type="text" id="fullname" placeholder="Enter your name">
+        <section class="grid-2 vote-grid">
+            <article class="card vote-card" data-key="patricia" data-count="420">
+                <div class="vote-image placeholder-patricia">
+                    <span>🐎</span>
+                    <small>Patricia</small>
+                </div>
+                <div class="vote-content">
+                    <div class="candidate-head">
+                        <div>
+                            <span class="candidate-label" id="patricia-rider-label">Rider</span>
+                            <h3 id="patricia-rider-name">Abby</h3>
+                        </div>
+                        <div>
+                            <span class="candidate-label" id="patricia-horse-label">Horse</span>
+                            <h2 id="patricia-horse-name">Patricia</h2>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email Address:</label>
-                        <input type="email" id="email" placeholder="name@example.com">
+
+                    <div class="tag-list">
+                        <span class="vote-tag" id="patricia-tag-1">Pure-blood believer</span>
+                        <span class="vote-tag" id="patricia-tag-2">Camera cut specialist</span>
+                    </div>
+
+                    <p class="vote-description" id="patricia-description">Although there was a small interruption during the obstacle test, Patricia still carries the strongest bloodline in the field.</p>
+                    <p class="vote-slogan" id="patricia-slogan">“Cut the cameras! Pick us and let the chaos roll.”</p>
+
+                    <div class="vote-footer">
+                        <div class="vote-stats">
+                            <span class="vote-stat-label" id="patricia-current-votes-label">Current votes</span>
+                            <span class="vote-count" id="patricia-vote-count">420</span>
+                        </div>
+                        <button type="button" class="btn vote-btn">Vote</button>
                     </div>
                 </div>
+            </article>
 
-                <div class="grid-2" style="margin-bottom: 0;">
-                    <div class="form-group">
-                        <label for="membership-level">Membership Level:</label>
-                        <select id="membership-level">
-                            <option>Standard (Free - $0/yr)</option>
-                            <option>Pro Rider ($50/yr)</option>
-                            <option>Grand Master ($120/yr)</option>
-                        </select>
+            <article class="card vote-card" data-key="rare-mane" data-count="380">
+                <div class="vote-image placeholder-rare-mane">
+                    <span>🦄</span>
+                    <small>Rare Mane</small>
+                </div>
+                <div class="vote-content">
+                    <div class="candidate-head">
+                        <div>
+                            <span class="candidate-label" id="rare-mane-rider-label">Rider</span>
+                            <h3 id="rare-mane-rider-name">Shaniqua</h3>
+                        </div>
+                        <div>
+                            <span class="candidate-label" id="rare-mane-horse-label">Horse</span>
+                            <h2 id="rare-mane-horse-name">Rare Mane</h2>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="horse-type">Interested Horse Type:</label>
-                        <select id="horse-type">
-                            <option>Classic Fabric</option>
-                            <option>Warmblood Sport</option>
-                            <option>Endurance Black</option>
-                            <option>Vintage Spotted</option>
-                            <option>Customized</option>
-                        </select>
+
+                    <div class="tag-list">
+                        <span class="vote-tag" id="rare-mane-tag-1">Rare mane</span>
+                        <span class="vote-tag" id="rare-mane-tag-2">Lens magnet</span>
+                    </div>
+
+                    <p class="vote-description" id="rare-mane-description">This is the rarest mane color in the entire tournament, and it may be enough to outshine the rest of the field on pure visual power.</p>
+                    <p class="vote-slogan" id="rare-mane-slogan">“Beauty is power — this mane deserves your vote.”</p>
+
+                    <div class="vote-footer">
+                        <div class="vote-stats">
+                            <span class="vote-stat-label" id="rare-mane-current-votes-label">Current votes</span>
+                            <span class="vote-count" id="rare-mane-vote-count">380</span>
+                        </div>
+                        <button type="button" class="btn vote-btn">Vote</button>
                     </div>
                 </div>
+            </article>
 
-                <div class="form-group" style="margin-top: 1.5rem;">
-                    <label for="bio">Rider Motto / Declaration:</label>
-                    <textarea id="bio" rows="3" placeholder="Share your passion for Hobby Horsing..."></textarea>
+            <article class="card vote-card" data-key="nostril" data-count="310">
+                <div class="vote-image placeholder-nostril">
+                    <span>🐴</span>
+                    <small>Nostril Perfection</small>
                 </div>
+                <div class="vote-content">
+                    <div class="candidate-head">
+                        <div>
+                            <span class="candidate-label" id="nostril-rider-label">Rider</span>
+                            <h3 id="nostril-rider-name">Emily</h3>
+                        </div>
+                        <div>
+                            <span class="candidate-label" id="nostril-horse-label">Horse</span>
+                            <h2 id="nostril-horse-name">Nostril Perfection</h2>
+                        </div>
+                    </div>
 
-                <button type="submit" class="btn">Submit Application</button>
-            </form>
+                    <div class="tag-list">
+                        <span class="vote-tag" id="nostril-tag-1">Perfect nostrils</span>
+                        <span class="vote-tag" id="nostril-tag-2">Detail decides the win</span>
+                    </div>
+
+                    <p class="vote-description" id="nostril-description">The mane is dramatic, but the real masterpiece is the flawless nose coloring and the tiny details that make this horse unforgettable.</p>
+                    <p class="vote-slogan" id="nostril-slogan">“Zoom in on the nostrils — that is where the real champion lives.”</p>
+
+                    <div class="vote-footer">
+                        <div class="vote-stats">
+                            <span class="vote-stat-label" id="nostril-current-votes-label">Current votes</span>
+                            <span class="vote-count" id="nostril-vote-count">310</span>
+                        </div>
+                        <button type="button" class="btn vote-btn">Vote</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card vote-card" data-key="mystery" data-count="310">
+                <div class="vote-image placeholder-mystery">
+                    <span>🪶</span>
+                    <small>The Mystery Horse</small>
+                </div>
+                <div class="vote-content">
+                    <div class="candidate-head">
+                        <div>
+                            <span class="candidate-label" id="mystery-rider-label">Rider</span>
+                            <h3 id="mystery-rider-name">Contestant 6</h3>
+                        </div>
+                        <div>
+                            <span class="candidate-label" id="mystery-horse-label">Horse</span>
+                            <h2 id="mystery-horse-name">The Mystery Horse</h2>
+                        </div>
+                    </div>
+
+                    <div class="tag-list">
+                        <span class="vote-tag" id="mystery-tag-1">Trot whisperer</span>
+                        <span class="vote-tag" id="mystery-tag-2">Mystery tactic</span>
+                    </div>
+
+                    <p class="vote-description" id="mystery-description">This contender does not rely on height or bravado. It is the quiet trot whispering that turns a small step into a game-changing advantage.</p>
+                    <p class="vote-slogan" id="mystery-slogan">“Hear the trot whisper? Then cast your vote for the dark horse.”</p>
+
+                    <div class="vote-footer">
+                        <div class="vote-stats">
+                            <span class="vote-stat-label" id="mystery-current-votes-label">Current votes</span>
+                            <span class="vote-count" id="mystery-vote-count">310</span>
+                        </div>
+                        <button type="button" class="btn vote-btn">Vote</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="card leaderboard">
+            <div class="leaderboard-header">
+                <h2 id="leaderboard-title">Drama Leaderboard</h2>
+                <p id="leaderboard-description">Live rankings update as votes roll in.</p>
+            </div>
+            <ul class="leaderboard-list" id="leaderboard-list"></ul>
+        </section>
+
+        <section class="grid-2 social-grid">
+            <section class="card social-card">
+                <h2 id="social-title">Social & Giveaway</h2>
+                <p id="social-copy">Voting is only half the fun. Share your favorite clip on TikTok or Instagram with the tag <strong>#hobbyhorsingfunnies</strong> to enter the Golden Badge giveaway.</p>
+                <button type="button" class="btn" id="copy-link-btn">Copy Share Link</button>
+            </section>
+
+            <section class="card qr-card">
+                <h2 id="qr-title">QR Code</h2>
+                <div class="qr-box">
+                    <img 
+                        src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://joy-the-goose.github.io/Horsin-Around-with-us/" 
+                        alt="Hobby Horsing Club QR Code"
+                    />
+                </div>
+                <p id="qr-caption" class="qr-caption">Welcome to Share</p>
+            </section>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Hobby Horsing Club. Earthy handmade paper style home page. All rights reserved.</p>
     </footer>
+
+    <div class="toast" id="toast">Link copied! Go share with #hobbyhorsingfunnies!</div>
+
+    <script src="language-switcher.js"></script>
+    <script src="vote-script.js"></script>
 </body>
 </html>

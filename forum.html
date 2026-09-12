@@ -26,21 +26,21 @@
 
     <!-- Page Body -->
     <main class="paper-drop">
-        <h1 class="page-title">Community Discussion & Suggestions</h1>
-        <p class="page-subtitle">Share your riding experiences, suggest improvements, or interact with other riders.</p>
+        <h1 id="forum-page-title" class="page-title">Community Discussion & Suggestions</h1>
+        <p id="forum-page-subtitle" class="page-subtitle">Share your riding experiences, suggest improvements, or interact with other riders.</p>
 
         <!-- Message Board -->
         <section class="card">
-            <h2>Community Message Board</h2>
+            <h2 id="community-message-board">Community Message Board</h2>
             <div style="background-color: #FAF6ED; padding: 1.5rem; border-radius: 6px; border: 1px dashed var(--card-border); margin-bottom: 1.5rem;">
-                <p style="font-weight: bold; margin-bottom: 0.5rem;">Rider @Forest_Rider:</p>
-                <p>"I suggest adding a night-time fluorescent hobby horse track to next month's obstacle camp. What do you guys think?"</p>
-                <span style="font-size: 0.8rem; color: #7A726B;">Posted on 2026-09-02</span>
+                <p id="forum-post-1-author" style="font-weight: bold; margin-bottom: 0.5rem;">Rider @Forest_Rider:</p>
+                <p id="forum-post-1-text">"I suggest adding a night-time fluorescent hobby horse track to next month's obstacle camp. What do you guys think?"</p>
+                <span id="forum-post-1-date" style="font-size: 0.8rem; color: #7A726B;">Posted on 2026-09-02</span>
             </div>
             <div style="background-color: #FAF6ED; padding: 1.5rem; border-radius: 6px; border: 1px dashed var(--card-border);">
-                <p style="font-weight: bold; margin-bottom: 0.5rem;">Rider @Wind_Galloper:</p>
-                <p>"How should a beginner choose their first handmade hobby horse? Looking for recommendations!"</p>
-                <span style="font-size: 0.8rem; color: #7A726B;">Posted on 2026-09-01</span>
+                <p id="forum-post-2-author" style="font-weight: bold; margin-bottom: 0.5rem;">Rider @Wind_Galloper:</p>
+                <p id="forum-post-2-text">"How should a beginner choose their first handmade hobby horse? Looking for recommendations!"</p>
+                <span id="forum-post-2-date" style="font-size: 0.8rem; color: #7A726B;">Posted on 2026-09-01</span>
             </div>
         </section>
 
@@ -48,37 +48,37 @@
         <section class="grid-2">
             <!-- Suggestion Form -->
             <div class="card">
-                <h2>Share Your Suggestions</h2>
+                <h2 id="share-suggestions">Share Your Suggestions</h2>
                 <form>
                     <div class="form-group">
-                        <label for="username">Nickname:</label>
+                        <label id="nickname-label" for="username">Nickname:</label>
                         <input type="text" id="username" placeholder="Enter your rider handle">
                     </div>
                     <div class="form-group">
-                        <label for="category">Category:</label>
+                        <label id="category-label" for="category">Category:</label>
                         <select id="category">
-                            <option>Training Experience</option>
-                            <option>Equipment Suggestions</option>
-                            <option>Event Ideas</option>
-                            <option>Other Feedback</option>
+                            <option id="category-option-1">Training Experience</option>
+                            <option id="category-option-2">Equipment Suggestions</option>
+                            <option id="category-option-3">Event Ideas</option>
+                            <option id="category-option-4">Other Feedback</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">Content:</label>
+                        <label id="message-label" for="message">Content:</label>
                         <textarea id="message" rows="4" placeholder="Enter your feedback here..."></textarea>
                     </div>
-                    <button type="submit" class="btn">Submit Post</button>
+                    <button id="submit-post" type="submit" class="btn">Submit Post</button>
                 </form>
             </div>
 
             <!-- Supervisor Contact -->
             <div class="card">
-                <h2>Supervisor Contact</h2>
-                <p style="margin-bottom: 1rem;">If you encounter any issues during activities or need professional coaching, please contact our duty supervisor:</p>
+                <h2 id="supervisor-contact">Supervisor Contact</h2>
+                <p id="supervisor-copy" style="margin-bottom: 1rem;">If you encounter any issues during activities or need professional coaching, please contact our duty supervisor:</p>
                 <ul style="list-style: none; line-height: 2rem;">
-                    <li><strong>Head Coach:</strong> Alan &middot; Timber</li>
-                    <li><strong>Email:</strong> supervisor@hobbyhorsing.club</li>
-                    <li><strong>Office Hours:</strong> Wed, Fri 14:00 - 17:00</li>
+                    <li><strong id="head-coach">Head Coach:</strong> Alan &middot; Timber</li>
+                    <li><strong id="email">Email:</strong> supervisor@hobbyhorsing.club</li>
+                    <li><strong id="office-hours">Office Hours:</strong> Wed, Fri 14:00 - 17:00</li>
                 </ul>
             </div>
         </section>
@@ -86,7 +86,9 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Hobby Horsing Club. Earthy handmade paper style home page. All rights reserved.</p>
+        <p id="footer-copy">&copy; 2026 Hobby Horsing Club. Earthy handmade paper style home page. All rights reserved.</p>
     </footer>
+
+    <script src="language-switcher.js"></script>
 </body>
 </html>

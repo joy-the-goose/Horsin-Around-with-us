@@ -19,10 +19,10 @@
 body {
     background-color: #d9d0af;
     background-image:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+        linear-gradient(180deg, rgba(217, 208, 175, 0.45), rgba(217, 208, 175, 0.45)),
         url("../../素材库/Website Background.png");
-    background-position: center center;
-    background-size: cover;
+    background-position: left top;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: scroll;
     color: var(--text-color);

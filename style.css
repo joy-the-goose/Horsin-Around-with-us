@@ -20,8 +20,8 @@ body {
     background-color: #d9d0af;
     background-image:
         linear-gradient(180deg, rgba(217, 208, 175, 0.45), rgba(217, 208, 175, 0.45)),
-        url("../../素材库/Website Background.png");
-    background-position: left top;
+        url("assets/Website Background.png");
+    background-position: center top;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -34,6 +34,8 @@ body {
     flex-direction: column;
     position: relative;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 @keyframes paperDropAnim {
     0% { opacity: 0; transform: translateY(-40px) rotate(-1.5deg) scale(0.98); }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote For Horses!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Unified Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🐎 Vote For Horses!</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="news.html">Latest News</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="golden_horse.html" class="active">Vote For Horses!</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Body -->
+    <main class="paper-drop">
+        <h1 class="page-title">Membership & Benefits</h1>
+        <p class="page-subtitle">Join our family to enjoy professional training, gear customization, and priority registration.</p>
+
+        <!-- Benefits Comparison -->
+        <section class="card">
+            <h2>Levels & Benefits</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Benefit</th>
+                        <th>Standard (Free)</th>
+                        <th>Pro Rider</th>
+                        <th>Grand Master</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Facility Access</strong></td>
+                        <td>Training Days</td>
+                        <td>Priority Booking</td>
+                        <td>Unlimited Access</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Coaching</strong></td>
+                        <td>None</td>
+                        <td>2 Workshops/Month</td>
+                        <td>Weekly 1-on-1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gear Discount</strong></td>
+                        <td>None</td>
+                        <td>10% Off</td>
+                        <td>25% Off + Custom</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tournament Entry</strong></td>
+                        <td>Regular</td>
+                        <td>Priority Lane</td>
+                        <td>Invitational Seat</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Registration Form -->
+        <section class="card">
+            <h2>New Member Registration</h2>
+            <form>
+                <div class="grid-2" style="margin-bottom: 0;">
+                    <div class="form-group">
+                        <label for="fullname">Full Name / Handle:</label>
+                        <input type="text" id="fullname" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" placeholder="name@example.com">
+                    </div>
+                </div>
+
+                <div class="grid-2" style="margin-bottom: 0;">
+                    <div class="form-group">
+                        <label for="membership-level">Membership Level:</label>
+                        <select id="membership-level">
+                            <option>Standard (Free - $0/yr)</option>
+                            <option>Pro Rider ($50/yr)</option>
+                            <option>Grand Master ($120/yr)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="horse-type">Interested Horse Type:</label>
+                        <select id="horse-type">
+                            <option>Classic Fabric</option>
+                            <option>Warmblood Sport</option>
+                            <option>Endurance Black</option>
+                            <option>Vintage Spotted</option>
+                            <option>Customized</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 1.5rem;">
+                    <label for="bio">Rider Motto / Declaration:</label>
+                    <textarea id="bio" rows="3" placeholder="Share your passion for Hobby Horsing..."></textarea>
+                </div>
+
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Hobby Horsing Club. Earthy handmade paper style home page. All rights reserved.</p>
+    </footer>
+</body>
+</html>

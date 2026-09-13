@@ -2,6 +2,20 @@
    Earthy & Textured Paper - Shared Stylesheet
    ========================================== */
 @font-face {
+    font-family: "Irish Grover";
+    src: url("./assets/Irish_Grover/IrishGrover-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cherry Cream Soda";
+    src: url("./assets/Cherry_Cream_Soda/CherryCreamSoda-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "Caacupe One";
     src: url("./assets/Caacupe_One/CaacupeOne-Regular.ttf") format("truetype");
     font-weight: 400;
@@ -10,17 +24,17 @@
 
 :root {
     --bg-color: #F5F0E6;
-    --text-color: #2E2A27;
-    --accent-red: #C26D51;
-    --accent-green: #5E6C53;
-    --card-bg: #EFE8D8;
-    --card-border: #DFD5C3;
-    --card-hover: #E4DCCB;
-    --muted-text: #554F4B;
+    --text-color: #4A362D;
+    --accent-red: #CDB8A0;
+    --accent-green: #B7A88E;
+    --card-bg: #F0E7D9;
+    --card-border: #D9CBB5;
+    --card-hover: #E6D9C8;
+    --muted-text: #7A6658;
     --shadow-soft: 0 2px 8px rgba(46, 42, 39, 0.03);
     --shadow-hover: 0 6px 16px rgba(46, 42, 39, 0.06);
-    --font-serif: "Noto Serif SC", "Source Han Serif SC", "Georgia", serif;
-    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-serif: "Irish Grover", "Noto Serif SC", "Source Han Serif SC", "Georgia", serif;
+    --font-sans: "Cherry Cream Soda", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body {
@@ -64,22 +78,32 @@ header {
     position: sticky; top: 0; z-index: 100; backdrop-filter: blur(4px);
 }
 .nav-container {
-    max-width: 1200px; margin: 0 auto; padding: 0.9rem 2rem;
-    display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem 1rem;
+    max-width: 1200px; margin: 0 auto; padding: 0.45rem 2rem 0.5rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
     position: relative;
 }
 .logo {
-    font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700;
-    color: var(--text-color); text-decoration: none; border-bottom: 2px solid var(--accent-red); padding-bottom: 0.15rem;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: clamp(420px, 38vw, 760px);
+    height: clamp(55px, 6vw, 90px);
+    font-family: var(--font-serif); font-size: 0; font-weight: 700;
+    color: transparent; text-decoration: none; border-bottom: none; padding-bottom: 0;
+    background-image: url("./assets/title.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-nav { display: flex; align-items: center; width: 100%; }
-nav ul { list-style: none; display: flex; gap: 1rem; flex-wrap: wrap; width: 100%; justify-content: space-between; }
+nav { display: flex; align-items: center; justify-content: flex-end; width: 100%; transform: translateX(-1.2rem); }
+nav ul { list-style: none; display: grid; grid-template-columns: repeat(3, auto); column-gap: 0.2rem; row-gap: 0.45rem; width: auto; margin-left: auto; }
+nav li { display: flex; justify-content: center; align-items: center; }
 nav a {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none; color: var(--text-color); font-size: 1.4rem; font-weight: 600;
-    padding: 0.5rem 0.85rem; border-radius: 6px; border: 1px solid transparent;
+    padding: 0.3rem 0.65rem; border-radius: 6px; border: 1px solid transparent;
     transition: all 0.2s ease; line-height: 1.2;
     font-family: "Caacupe One", var(--font-sans);
     letter-spacing: 0.06em;
@@ -90,6 +114,10 @@ nav a:hover, nav a.active {
     color: var(--accent-red);
     background-color: rgba(194, 109, 81, 0.08);
     border-color: rgba(194, 109, 81, 0.18);
+}
+
+nav a[href="history.html"] {
+    transform: translateX(-1.2rem) translateY(0.18rem);
 }
 
 .vote-nav-item {
@@ -203,7 +231,10 @@ main {
 }
 
 .content-panel {
-    background: rgba(255, 255, 255, 0.30);
+    background-image: url("./assets/text box.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border: 1px solid rgba(143, 133, 114, 0.45);
     border-radius: 18px;
     box-shadow: 0 10px 24px rgba(46, 42, 39, 0.08);
@@ -702,7 +733,10 @@ img {
     margin-bottom: 2rem;
     box-shadow: var(--shadow-soft);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    background-image: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(0,0,0,0.015));
+    background-image: url("./assets/text box.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     backdrop-filter: blur(1px);
 }
 

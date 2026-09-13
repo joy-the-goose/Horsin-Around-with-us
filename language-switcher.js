@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     de: 'Aktueller Fokus'
                 },
                 'recent-copy': {
-                    en: 'The Spring National Hobby Horse Obstacle Championship is starting next month! Training camp registration is now open. Come pick your horse and join the competition!',
+                    en: 'The latest championship is coming soon! Welcome everyone to cast your vote and decide the ownership of The Golden Horse.',
                     'zh-CN': '春季全国 Hobby Horse 障碍赛将在下月开始！训练营报名现已开放。快来挑选你的马，加入比赛！',
                     'zh-TW': '春季全國 Hobby Horse 障礙賽將在下月開始！訓練營報名現已開放。快來挑選你的馬，加入比賽！',
                     fr: 'Le championnat national printanier d’obstacles de hobby horse commencera le mois prochain ! Les inscriptions au camp d’entraînement sont désormais ouvertes. Venez choisir votre cheval et rejoignez la compétition !',
